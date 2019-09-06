@@ -1,0 +1,16 @@
+mutfak = input("Mutfak giderleriniz : ")
+egitim = input("Egitim giderleriniz : ")
+giyim  = input("Giyim giderleriniz  : ")
+ulasim = input("Ulasim giderleriniz : ")
+aylik_gelir = input("Aylik toplam geliriniz : ")
+
+aylik_gider = int(mutfak) + int(egitim) + int(giyim) + int(ulasim)
+oran = (int(aylik_gider) / int(aylik_gelir))*100
+
+dosya = open("Aylik_masraf.txt","w")
+
+print("Aylik toplam masrafiniz : ", int(aylik_gider))
+print("Giderinizin gelirinize orani : %", float(oran))
+
+print("Aylik toplam masrafiniz : ", int(aylik_gider),file=dosya)
+print("Giderinizin gelirinize orani : %", float(oran), file=dosya)
