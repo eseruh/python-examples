@@ -1,0 +1,16 @@
+ad   = input("Adinizi giriniz\t:")
+soyad= input("Soyadinizi giriniz\t:")
+vize = input("Vize notunuzu giriniz\t:")
+final= input("Final notunuzu giriniz\t:")
+ders_sayisi= input("Ders sayinizi giriniz\t:")
+
+dosya = open("OgrenciNotHesaplama.txt","w")
+ders_takip = int(ders_sayisi)*5
+ortalama = int(vize)*0.3+int(final)*0.5+int(ders_takip)*0.2
+print("Adi\t:",ad,"\n",
+      "Soyadi\t:",soyad,"\n",
+      "Vize Notu\t:",vize,"\n",
+      "Final Notu\t:",final,"\n",
+      "Ders Sayisi\t:",ders_sayisi,"\n",
+      file=dosya,sep="")
+print("Donem sonu ortalamaniz\t:",ortalama,file=dosya)
