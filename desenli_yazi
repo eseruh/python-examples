@@ -1,0 +1,21 @@
+takim  = input("Takiminizi giriniz")
+cizgi  ="_"*len(takim)
+yildiz = "*"*len(takim)*2
+bosluk = " "*len(takim)*2
+
+desen="""                   {} 
+                 **{}**
+               **  {}  **
+             **    {}    **
+           **      {}      **
+         **        {}        **
+                   {}
+                   {}
+         **        {}        **
+           **      {}      **
+             **    {}    **
+               **  {}  **
+                 **{}**
+                   {}"""
+
+print(desen.format(yildiz,bosluk,bosluk,bosluk,bosluk,bosluk,takim,cizgi,bosluk,bosluk,bosluk,bosluk,bosluk,yildiz))
