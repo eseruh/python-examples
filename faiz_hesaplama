@@ -1,0 +1,15 @@
+anapara=input("Ana paranizi giriniz : ")
+faiz_suresi=input("Paranin faizde kalacagi yili giriniz :")
+faiz_orani=input("Faiz oranini giriniz :")
+
+faiz_tutari=int(anapara)*int(faiz_suresi)*(int(faiz_orani)/100)
+toplam_para=int(anapara)+faiz_tutari
+aylik_faiz=float(faiz_tutari)/12
+gunluk_faiz=float(aylik_faiz)/30
+
+dosya = open("faizHesaplama.txt","w")
+
+print("Toplam faiz tutari :",faiz_tutari,"\n",
+      "Aylik ortalama faiz tutari :",aylik_faiz,"\n",
+      "Gunluk ortalama faiz tutari :",gunluk_faiz,"\n",
+      "Toplam para miktari :",int(toplam_para),file=dosya)
